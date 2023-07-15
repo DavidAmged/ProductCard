@@ -1,0 +1,161 @@
+/********************* reset ************************/
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+
+/********************* global ************************/
+@font-face {
+    font-family: Montserrat;
+    src: url(./fonts/Montserrat-VariableFont_wght\ 500.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(./fonts/Montserrat-VariableFont_wght\ 700.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: Fraunces;
+    src: url(./fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght\ 700.ttf);
+    font-weight: 700;
+}
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+body{
+    background-color: var(--Cream);
+    text-align: center;
+    font-family: Montserrat,Fraunces;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/********************* main ************************/
+div.container {
+    background-color: var(--White);
+    width: 90%;
+    border-radius: 0.7em;
+}
+div.img img.image-d {
+    display: none;
+}
+div.img img.image-m {
+    width: 100%;
+    border-top-left-radius: 0.7em;
+    border-top-right-radius: 0.7em;
+}
+div.card-content h1 {
+    color: var(--Dark-grayish-blue);
+    text-align: left;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 0.8em;
+    letter-spacing: 4px;
+    margin-left: 23px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+div.card-content h2 {
+    color: var(--Very-dark-blue);
+    text-align: left;
+    font-family: Fraunces;
+    font-weight: 700;
+    font-size: 2em;
+    margin-left: 23px;
+    margin-bottom: 15px;
+}
+div.card-content p {
+    color: var(--Dark-grayish-blue);
+    text-align: left;
+    line-height: 23px;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 23px;
+}
+div.card-content p.ch {
+    color: var(--Dark-grayish-blue);
+    text-align: left;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 23px;
+    margin-bottom: 20px;
+}
+div.price {
+    display: flex;
+    align-items: center;
+
+}
+div.price p.current-price {
+    color: var(--Dark-cyan);
+    text-align: left;
+    font-family: Fraunces;
+    font-weight: 700;
+    font-size: 1.7em;
+    margin-left: 23px;
+    margin-bottom: 22px;
+    padding-right: 25px;
+}
+div.price p.old-price {
+    color: var(--Dark-grayish-blue);
+    text-decoration: line-through;
+    margin-bottom: 18px;
+}
+button.cart {
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    font-family: Montserrat;
+    font-weight: 700;
+    width: 87%;
+    height: 55px;
+    border-radius: 0.7em;
+    margin-bottom: 15px;
+}
+div.attribution {
+    margin-top: 1em;
+}
+
+/********************* media query ************************/
+@media screen and (min-width: 992px) {
+    div.grid {
+        max-width: 700px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 0.7em;
+        overflow: hidden;
+    }
+    div.container {
+        width: 40%;
+    }
+    div.img img.image-m {
+        display: none;
+    }
+    div.img img.image-d {
+        display: initial;
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 0.7em;
+        border-bottom-left-radius: 0.7em;
+    }
+    div.card-content h1 {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    div.card-content h2 {
+        margin-top: 20px;
+        font-size: 2.1em;
+        padding-right: 45px;
+    }
+ }
